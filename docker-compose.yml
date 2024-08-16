@@ -1,0 +1,14 @@
+version: '1'
+
+services:
+  backend:
+    build: backend/
+    ports: 
+        - 8087:8087
+    command: node index.js
+
+  frontend:
+    build: frontend/
+    ports: 
+        - 8085:8085
+    command: npm run start
