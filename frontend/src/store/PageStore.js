@@ -1,6 +1,6 @@
 import {makeAutoObservable} from 'mobx';
 
-export default class UserStore {
+export default class PageStore {
     constructor(){
         this._totalCount = 0;
         this._pages = [];
