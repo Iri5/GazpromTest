@@ -46,7 +46,7 @@ const Main = observer(() => {
             <Form>
                 <Form.Control type="number" placeholder="page" style={{width: 25 + '%', margin: 'auto'}}
                     onChange={(e)=>{
-                        parseInt(e.target.value) ?
+                        ((parseInt(e.target.value) > 0) && (parseInt(e.target.value) <= Math.ceil(pages.totalCount / pages.limit))) ?
                         pages.setPage(parseInt(e.target.value)) : 
                         pages.setPage(1)
                         }}
